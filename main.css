@@ -81,7 +81,6 @@ Results styles
 }
 
 .panel:hover {
-	background-color: #E37222;
 	box-shadow: 0 0 5px rgba(50,50,50,.5);
 	text-decoration: underline;
 	transition: all .2s ease;

@@ -6,7 +6,9 @@ const navigateToSearch = (e) => {
 	let currentLocation = window.location.href.slice(window.location.href.lastIndexOf('/') + 1);
 	let userInput = e.target[0].value;
 	let searchLocation = `search.html?=${userInput}`;
-	window.location.href = `${window.location.href.slice(0, window.location.href.lastIndexOf('/') + 1)}${searchLocation}`;
+	if (userInput) {
+		window.location.href = `${window.location.href.slice(0, window.location.href.lastIndexOf('/') + 1)}${searchLocation}`;		
+	}
 }
 
 if (form && form.addEventListener) {
@@ -14,5 +16,3 @@ if (form && form.addEventListener) {
 } else if (form && form.attachEvent) {
     form.attachEvent('onsubmit', navigateToSearch);
 }
-
-console.log(window.location);
