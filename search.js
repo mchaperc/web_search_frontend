@@ -6,7 +6,8 @@ searchText.innerText = decodeURIComponent(currentLocation);
 let resultsContainer = document.getElementById('resultsContainer');
 
 marmottajax({
-    url: `https://basic-search-engine.herokuapp.com/search/${currentLocation}`,
+    // url: `https://basic-search-engine.herokuapp.com/search/${currentLocation}`,
+    url: `http://127.0.0.1:8000/search/${currentLocation}`,
     method: 'get',
 }).success(function(result) {
     let urls = JSON.parse(result);
@@ -14,7 +15,13 @@ marmottajax({
     let tempFn = doT.template(
     	`
     		{{~it.urls :value:index}}
-    			<a href="{{=value.url}}" class="panel">{{=value.url}}</a>
+    		    <div class="panel">
+    		        <a href="{{=value.url}}">{{=value.title || value.url}}
+    		            <p>{{=value.url}}</p>
+    		            <p>{{=value.description || ''}}</p>
+    		        </a>
+                </div>
+    			
     		{{~}}
     	`
     )
