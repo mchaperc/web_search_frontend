@@ -9,7 +9,7 @@ let pageNum = 1;
 
 let searchQuery = () => {
     marmottajax({
-        url: `https://basic-search-engine.herokuapp.com/search/${currentLocation}`,
+        url: `https://basic-search-engine.herokuapp.com/search/${currentLocation}/${pageNum}`,
         // url: `http://127.0.0.1:8000/search/${currentLocation}/${pageNum}`,
         method: 'get',
     }).success(function(result) {
