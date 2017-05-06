@@ -9,11 +9,16 @@
 </head>
 <body>
 	<div class="results-header">
+		<form id="searchForm">
+			<input type="text" id="searchFormInput"><!--
+			 --><button class="btn search"><i class="fa fa-search"></i></button>
+		</form>
 		<h1 class="banner">Search results for <span class="banner-sub-text" id="searchText"></span></h1>
 	</div>
 	<div class="results" id="resultsContainer"></div>
 	<script src="./marmottajax.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dot/1.1.0/doT.min.js"></script>
+	<script src="./index.js"></script>
 	<script src="./search.js"></script>	
 </body>
 </html>

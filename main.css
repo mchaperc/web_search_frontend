@@ -55,6 +55,10 @@ Results styles
 	padding: 1rem;
 }
 
+.results-header #searchForm {
+	margin-bottom: 1rem;
+}
+
 .banner > .banner-sub-text {
 	font-style: italic;
 }
@@ -92,3 +96,42 @@ Results styles
 .panel:hover a {
 	text-decoration: underline;
 }
+
+.pagination {
+	text-align: center;
+}
+
+.pagination > a {
+	background-color: #FAFAFA;
+	border-bottom: 1px solid #66B9BF;
+	border-left: 1px solid #66B9BF;
+	border-top: 1px solid #66B9BF;
+	color: #07889B;
+	display: inline-block;
+	font-size: 1.2rem;
+	font-family: sans-serif;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	width: 40px;
+}
+
+.pagination a.active {
+	color: #E37222;
+	pointer-events: none;
+}
+
+.pagination a:hover:not(:first-of-type), .pagination a:hover:not(:last-of-type) {
+	text-decoration: underline;
+}
+
+.pagination > a:not(:first-of-type) {
+	margin-left: -4px;
+}
+
+.pagination > a:last-of-type {
+	border-right: 1px solid #66B9BF;
+}
+
+.results-header
